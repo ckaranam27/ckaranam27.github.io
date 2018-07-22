@@ -1,57 +1,113 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="web.css" rel="stylesheet" type="text/css"> -->
+   <link rel="stylesheet" href="web.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
 
-  <h1>Chandra Karanam</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>Lattitude</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Plots</b><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="temperature.html">Max Temperature</a></li>
+            <li><a href="Humidity.html">Humidity</a></li>
+            <li><a href="Cloudiness.html">Cloudiness</a></li>
+            <li><a href="Windspeed.html">Wind Speed</a></li>
+          </ul>
+        </li>
+        <li><a href="Comparison.html"><b>Comparison</b></a></li>
+        <li><a href="Data.html"><b>Data</b></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <img src="https://placehold.it/200x200" alt="Chadnra Karanam">
+<div class="container">
+  <!-- <h3><center>Weather in Global Cities vs Latitude</center></h3>
+  <br>
+  <h5><b><center>Have you ever wondered about how the weather changes across the globe as you go towards the equator?</center></b></h5> -->
 
-  <p>Hi Myname is Chandra. currently learning  Web based technologies and hope I will get experet soon.</p>
-  <p>and add this skill set to use python and other web related tech scripts.</p>
+</div>
+<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="box">Summary: Latitude vs. X
+          <br>
+          <a href="temperature.html">
+          <img class="image" src = "assets/images/Fig1.png" ALIGN=left HSPACE=40 VSPACE=20/>
+          </a>
+          <br>
+          <p>The purpose of this project was to analyze how the weather
+          changes as you get closer to the equator. To accomplish
+          this analysis, this module employs Python requests, weather APIs,
+          and JSON traversals. Using the Citipy library and
+          OpenWeatherMap API, this script creates a representative
+          model of weather across 500+ cities across the globe.
+          <br>
+          <br>
+          The program randomly generates over 1000 latitude/longitude pairs
+          and feeds them to the OpenWeatherMapAPI. It performs a series of
+          successive throttled API calls to extract weather data in
+          all found cities. It then drops duplicate cities, null value
+          rows, counts the total, and saves the resulting table
+          as a CSV. To showcase the following relationships, it
+          builds a series of scatter plots using Matplotlib:
+          <ul>
+            <li>Temperature (F) vs. Latitude</li>
+            <li>Humidity (%) vs. Latitude</li>
+            <li>Cloudiness (%) vs. Latitude</li>
+            <li>Wind Speed (mph) vs. Latitude</li>
+          </ul>
+          <!-- Finally, alongwith the city data CSV, it returns the
+          scatterplots as png files. -->
+          </p>
+          </div>
+        </div>
 
-  <ul>
-    <li><strong>Email:</strong> <a href="#">chandra@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">http:github.com</a></li>
-    <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
-  </ul>
-
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Games</th>
-      <th>Test</th>
-    </tr>
-    <tr>
-      <td>The Hobbit</td>
-      <td>Hot Fuzz</td>
-      <td>Dark Souls</td>
-      <td>HTML</td>
-    </tr>
-    <tr>
-      <td>The Name of the Wind</td>
-      <td>The Avengers</td>
-      <td>The Last of Us</td>
-      <td>DHTML</td>
-    </tr>
-    <tr>
-      <td>The Girl With All the Gifts</td>
-      <td>The Matrix</td>
-      <td>Dragon Age: Origins</td>
-    </tr>
-
-    <tr>
-      <td>HTML/td>
-      <td>Dynamic HTML</td>
-      <td>XHTML</td>
-    </tr>
-  </table>
-
+        <div class = "col-xs-12 col-sm-12 col-md-4">
+          <div class="box">Visualizations
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="temperature.html">
+                    <img class="image" src = "assets/images/Fig1.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-6">
+                        <a href="Humidity.html">
+                        <img class="image" src = "assets/images/Fig2.png" HSPACE=1 VSPACE=15/>
+                        </a>
+                    </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Cloudiness.html">
+                    <img class="image" src = "assets/images/Fig3.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-6">
+                    <a href="Windspeed.html">
+                    <img class="image" src = "assets/images/Fig4.png" HSPACE=1 VSPACE=15/>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
-
 </html>
